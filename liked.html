@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="liked.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="" width="60px" height="60px" class="logo">
+        <h1>MrLololoshka</h1>
+        <a href="index.html"><img src="house.svg" alt=""  width="50px" height="50px" class="house"></a>
+        <a href="liked.html"><img src="triangle.svg" alt="" width="50px" height="50px" class="diamond"></a>
+    </header>
+    <div class="music-box">
+      <img src="music-logo.jpg" alt="" class="music-logo">
+      <p>Piosenka " Hymn *BLASKU* "</p>
+          <audio controls>
+              <source src="music.mp3" type="">
+          </audio>
+  </div>
+    <!-- galeria (HTML, CSS, JavaScript) wzięta z W3s, niektóre rzeczy dodałem sam-->
+    <div class="container">
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+            <img src="galleryimg1.webp">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+            <img src="galleryimg2.webp">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+            <img src="galleryimg3.webp">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+            <img src="galleryimg4.webp">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+            <img src="galleryimg5.webp">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+            <img src="Raja-Prime.webp">
+        </div>
+      
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+        
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      
+       
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="galleryimg1.webp" onclick="currentSlide(1)" alt="Fabrykator">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="galleryimg2.webp"  onclick="currentSlide(2)" alt="Upgrade swojego ciała">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="galleryimg3.webp"  onclick="currentSlide(3)" alt="Informacja o bohateru">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="galleryimg4.webp"  onclick="currentSlide(4)" alt="Kwantowy teleporter">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="galleryimg5.webp" onclick="currentSlide(5)" alt="Nawigacja systemu *REHOBOAM*">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="Raja-Prime.webp"  onclick="currentSlide(6)" alt="Raja-Prime">
+          </div>
+        </div>
+      </div>
+      <script>
+        let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+</body>
+
+</html>
