@@ -50,7 +50,20 @@ header>h1{
     top: 20%;
 
 }
+a{
+    text-decoration: none;
+    color: white;
+}
+a>p{
+    position: relative;
+    right: 25%;
+    top: 30%;
+    font-size: 20px;
+}
 .like{
+    position: absolute;
+    left: 50%;
+    top: 75%;
     transition: 1s;
 }
 .like:hover{
@@ -65,4 +78,61 @@ header>h1{
 .diamond:hover{
     transform: rotate(360deg);
 }
-
+.lololoshka{
+   position: relative;
+   bottom: 400px;
+   background-color: 0;
+   animation: lololoshka 2s;
+}
+@keyframes lololoshka{
+    from{opacity: 1;}
+    to{rotate: 360deg;}
+}
+.character>p{
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 60%;
+    left: 10px;
+}
+.Raja{
+    position: absolute;
+    top: 30%;
+    left: 75%;
+    width: 400px;
+    height: 200px;
+    transition: 1s;
+    color: white;
+    animation: Raja 2s infinite;
+}
+@keyframes Raja{
+    0%{top: 20%;}
+    50%{top: 30%;}
+    100%{top: 20%;}
+}
+.Raja>img{
+    width: 100%;
+    height: 200%;
+}
+.dialog{
+    position: absolute;
+    top: 30%;
+    left: 62%;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(63, 110, 104, 0.711);
+    border: 5px solid black;
+    border-radius: 5%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transition: 1s;
+}
+.dialog>a{
+    position: relative;
+    top: 30%;
+    transition: 1s;
+}
+.dialog>a:hover{
+    color: black;
+}
